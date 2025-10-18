@@ -1,8 +1,3 @@
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("active");
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".contact-form");
 
@@ -20,14 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!email.includes("@") || !email.includes(".")) {
       alert("Please enter a valid email address.");
-      return;
+      return; 
     }
 
     const success = document.createElement("p");
     success.textContent = "✅ Thank you, " + name + "! Your message has been sent successfully.";
-    success.style.color = "#5a2683";
+    success.style.color = "#693b57"; /* Changed from #5a2683 to match button/h1 */
     success.style.fontWeight = "bold";
     success.style.marginTop = "10px";
+    success.style.backgroundColor = "#f9f2f6"; /* Match form background */
 
     form.appendChild(success);
 
