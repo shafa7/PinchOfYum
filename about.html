@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Pinch of Yum</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+      <nav>
+          <h2>pinch <span class="grey">of</span> yum</h2>
+          
+          <div class="hamburger" onclick="toggleMenu()">
+             <div></div>
+             <div></div>
+             <div></div>
+          </div>
+          
+          <ul class="rightnav" id="nav-links">
+             <li><a href="index.html">HOME</a></li>
+             <li><a href="about.html">ABOUT</a></li>
+             <li><a href="recipe.html">RECIPES</a></li>
+             <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+      </nav>
+    </header>
+    <br />
+
+    <p class="line">ABOUT</p>
+    <br>
+
+    <div class="head">
+        <h2>I LOVE FOOD!</h2>
+    </div>
+
+    <div class="desc1">
+        <p>In this space, I am always sharing fresh, flavorful, (mostly) healthy recipes that I love to make and eat in my real, actual, every day life. If I wouldn’t eat it in real life, I won’t put in on the blog. My goal is to inspire you with food that is both approachable AND exciting, whether you’re cooking for yourself, your family, your roommates, or your friends. I want you to be so excited about these recipes that you eagerly await 5pm when you can go home from work and start cooking.</p>
+    </div>
+    <div class="desc2">
+        <p>On a related note, I absolutely LOVE seeing the food that you’re making. It will make my day if you tag @pinchofyum in your Instagram photos and stories! We love to shout out our favorites on Fridays with our Reader Awards on Instagram Stories.</p>
+    </div>
+
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/86/82/a1/8682a1d20358a5fd8528d0e2a9e9a81e.jpg" alt="">
+    </div>
+
+    <footer>
+      <div class="foot">
+        <p align="center" style="background-color: #5a2683;">PINCH OF YUM | FATHIMA SHAFA ABDUL MAJEED | copyright 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+
+        const navItems = navLinks.querySelectorAll("li");
+
+        if (navLinks.classList.contains("active")) {
+            navItems.forEach((item, index) => {
+                item.classList.remove("fade-in");
+                
+                setTimeout(() => {
+                    item.classList.add("fade-in");
+                }, index * 100);
+            });
+        } else {
+            navItems.forEach(item => {
+                item.classList.remove("fade-in");
+            });
+        }
+      }
+    </script>
+</body>
+</html>

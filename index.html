@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Chicken Tacos with Green Sauce</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2>pinch <span class="grey">of</span> yum</h2>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="rightnav" id="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="recipe.html">RECIPES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        </nav>
+    </header>
+    <br />
+
+    <p class="line">HOME</p>
+
+    <main align="center">
+      <div class="heading">
+        <h1>Ridiculously Good Chicken Tacos with Green Sauce</h1>
+        <p>⭐⭐⭐⭐⭐ 51 reviews / 5 average</p>
+        <br />
+        <div class="disc">
+          <p class="tagline">
+            <i>Just 20 minutes to get these chicken tacos on the table! Juicy,flavorful, and absolutely mindless in the best way</i>
+          </p>
+        </div>
+      </div>
+      <div class="jump">
+        <button>
+          <a href="#recipe">↓ JUMP TO RECIPE</a>
+        </button>
+      </div>
+
+      <div class="image-container" align="center">
+        <img
+          class="taco"
+          src="https://pinchofyum.com/wp-content/uploads/Favorite-Chicken-Tacos.jpg"
+          alt="tacos"
+        />
+      </div>
+
+      <div class="desc">
+        <h3>FEATURED COMMENT</h3>
+        <p class="comm">
+          <q>This was excellent! Truly couldnt have been easier to make and tasted like a great restaurant or food truck taco! My 18 month old devoured it and so did we!</q>
+        </p>
+      </div>
+
+      <div class="recipe-main" id="recipe"  align="center">
+        <h2>These Chicken Tacos In A Nutshell</h2>
+
+        <div class="step1">
+          <div class="num">1</div>
+          <div class="step1-name">
+            <h2><b>SEASON THE CHICKEN.</b></h2>
+          </div>
+          <br />
+          <div class="step-deta">
+            <p>
+              Three primary ingredients: taco seasoning, garlic, and a shot of
+              soy sauce! Im showing the taco seasoning on the chicken first in
+              this picture, but Ive come to realize that mixing works best if
+              you start with the wet stuff (oil and soy sauce) and then finish
+              with a quick toss in the dry spices! Doesnt get quite so clumpy.
+            </p>
+          </div>
+        </div>
+
+        <div class="step1">
+          <div class="num">2</div>
+          <div class="step1-name">
+            <h2><b>COOK THE CHICKEN.</b></h2>
+          </div>
+          <br />
+          <div class="step-deta">
+            <p>
+              I like to air fry it : 400 degrees for 11 minutes. Alternate
+              methods below if you dont have an air fryer!
+            </p>
+          </div>
+        </div>
+
+        <div class="step1">
+          <div class="num">3</div>
+          <div class="step1-name">
+            <h2><b>MAKE A GREEN SAUCE.</b></h2>
+          </div>
+          <br />
+          <div class="step-deta">
+            <p>
+              Not essential, but this is the kind of sauce that makes life worth
+              living.
+            </p>
+          </div>
+        </div>
+
+        <div class="step1">
+          <div class="num">4</div>
+          <div class="step1-name">
+            <h2><b>CUT UP THE CHICKEN.</b></h2>
+          </div>
+          <br />
+          <div class="step-deta">
+            <p>
+              Just give it a good rough chop into little bite-sized pieces, like
+              how it is at Chipotle. While you have the cutting board out, go
+              ahead and chop some cilantro and onions, too!
+            </p>
+          </div>
+        </div>
+
+        <div class="step1">
+          <div class="num">5</div>
+          <div class="step1-name">
+            <h2><b>YOURE DONE! YUM!</b></h2>
+          </div>
+          <br />
+          <div class="step-deta">
+            <p>Holy smokes. I can eat a lot of these</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <p align="center">
+          PINCH OF YUM | FATHIMA SHAFA ABDUL MAJEED | copyright 2025
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+
+        const navItems = navLinks.querySelectorAll("li");
+
+        if (navLinks.classList.contains("active")) {
+            navItems.forEach((item, index) => {
+                item.classList.remove("fade-in");
+                
+                setTimeout(() => {
+                    item.classList.add("fade-in");
+                }, index * 100);
+            });
+        } else {
+            navItems.forEach(item => {
+                item.classList.remove("fade-in");
+            });
+        }
+      }
+    </script>
+  </body>
+</html>

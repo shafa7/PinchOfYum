@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px;
+    background-color: lavender;
+}
+
+nav h2 {
+    color: #5a2683;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 20px 0; 
+    background-color: lavender;
+}
+
+.grey{
+    color: grey;
+}
+
+.rightnav {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  transition: none;
+}
+
+.rightnav li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    background-color: lavender;
+}
+
+.rightnav li a:hover {
+    color: #5a2683;
+}
+
+.heading{
+    padding: 20px;
+}
+
+.disc .tagline {
+    font-size: 18px;
+    color: rgb(109, 109, 109);
+    background-color: lavender;
+}
+
+.jump > button {
+    background-color: rgb(243, 240, 240);
+    padding: 10px;
+    width: 50%;
+    font-weight: bold;
+    margin: 20px;
+    border: none;
+}
+
+.jump > button:hover{
+    background-color: rgb(235, 232, 232);
+}
+
+.jump > button > a{
+    text-decoration: none;
+    background-color: rgb(243, 240, 240); 
+    color: #5a2683; 
+    padding: 10px; 
+    display: inline-block; 
+}
+
+.jump > button a:hover{
+    background-color: rgb(235, 232, 232);
+}
+
+.taco{
+    width: 50%; 
+    margin: 20px;
+    max-width: calc(100% - 40px); 
+    height: auto;
+    display: block; 
+}
+
+.line{
+    padding: 10px;
+    background-color:rgb(243, 240, 240) ;
+    border: none;
+    font-weight: bold;
+    color: rgb(97, 97, 97);
+}
+
+.desc{
+    margin: 20px;
+}
+
+h3{
+    font-size: 14px;
+    color: rgb(142, 142, 142);
+}
+
+.com{
+    margin: 20px;
+}
+
+.comm{
+    font-size: 14px;
+    color: rgb(41, 41, 41);
+}
+
+.recipe-main > h2{
+    margin: 20px;
+}
+
+.step1{
+    background-color:rgb(243, 240, 240) ;
+    width: 50%; /* Original width */
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.step1-name h2, .step1-name b, .step-deta p {
+    background-color: rgb(243, 240, 240); 
+}
+
+.step-deta p {
+    color: rgb(107, 106, 106);
+}
+
+.num{
+    background-color: #5a2683;
+    border-radius: 200px;
+    width: 6.5%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto 10px auto; 
+}
+
+.foot{
+    background-color: #5a2683;
+    padding: 20px;
+    color: white;
+}
+.foot p {
+    background-color: #5a2683; 
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 20px;
+    background-color: lavender;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #5a2683;
+    transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .rightnav {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: lavender;
+    width: 100%;
+    /* display: none; */
+    /* border-left: none;  */
+    z-index: 10;
+    padding: 10px 0;
+    visibility: hidden; /* Start hidden */
+    opacity: 0; /* Start invisible */
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s;
+  }
+  .rightnav.active {
+    /* display: flex; */
+    visibility: visible; /* Become visible */
+    opacity: 1; /* Fade in */
+    transform: translateX(0);
+  }
+  .rightnav li {
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateX(20px); /* Start slightly to the right */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  .rightnav li.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .rightnav li a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .taco,
+  .step1 {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+  }
+  .num {
+    width: 50px;
+    margin: 0 auto 10px auto;
+  }
+  .jump > button {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+    .heading h1, .contact-box h1, .box h1 { font-size: 18px; }
+    .rightnav li a { padding: 10px; font-size: 14px; }
+    .num { width: 40px; font-size: 14px; padding: 5px; }
+    .heading h1 { font-size: 24px; }
+    .comm { font-size: 16px; }
+}

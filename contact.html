@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinch of Yum | Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+      <nav>
+          <h2>pinch <span class="grey">of</span> yum</h2>
+          
+          <div class="hamburger" onclick="toggleMenu()">
+             <div></div>
+             <div></div>
+             <div></div>
+          </div>
+          
+          <ul class="rightnav" id="nav-links">
+             <li><a href="index.html">HOME</a></li>
+             <li><a href="about.html">ABOUT</a></li>
+             <li><a href="recipe.html">RECIPES</a></li>
+             <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+      </nav>
+    </header>
+    <br />
+
+    <p class="line">CONTACT</p>
+
+    <section class="contact-section">
+      <div class="contact-box">
+        <h1>We’d love to hear from you!</h1>
+        <p>
+          Whether you have a question, feedback, or just want to say hello,
+          we’re always happy to connect. Fill out the form below or reach out
+          through email.
+        </p>
+
+        <form class="contact-form" action="index.html">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <p align="center">PINCH OF YUM | FATHIMA SHAFA ABDUL MAJEED | copyright 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+
+        const navItems = navLinks.querySelectorAll("li");
+
+        if (navLinks.classList.contains("active")) {
+            navItems.forEach((item, index) => {
+                item.classList.remove("fade-in");
+                
+                setTimeout(() => {
+                    item.classList.add("fade-in");
+                }, index * 100);
+            });
+        } else {
+            navItems.forEach(item => {
+                item.classList.remove("fade-in");
+            });
+        }
+      }
+    </script>
+
+<script src="contact.js"></script>
+
+</body>
+</html>
