@@ -6,6 +6,18 @@
     background-color: lavender;
 }
 
+html { 
+    height: 100%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 nav {
     display: flex; 
     justify-content: space-between; 
@@ -96,12 +108,16 @@ nav h2 {
     border: none;
     font-weight: bold;
     color: rgb(97, 97, 97);
+    flex-shrink: 0;
 }
 
 .desc{
     margin: 20px;
 }
 
+.desc1 {
+    flex-grow: 1; /* Allows desc1 to take up remaining space */
+}
 h3{
     font-size: 14px;
     color: rgb(142, 142, 142);

@@ -1,7 +1,0 @@
-To update further use the following commands:
-
-   git add .
-
-   git commit -m "Briefly describe the new update here"
-
-   git push origin main

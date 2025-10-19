@@ -6,6 +6,23 @@
     background-color: lavender;
 }
 
+html { 
+    height: 100%; 
+    overflow-x: hidden; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    flex-shrink: 0;
+}
+
 nav {
     display: flex; 
     justify-content: space-between; 
@@ -48,11 +65,13 @@ nav h2 {
 }
 
 .line{
-    padding: 10px;
+    padding: 10px 0;
     background-color:rgb(243, 240, 240) ;
     border: none;
     font-weight: bold;
     color: rgb(97, 97, 97);
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .hamburger {
@@ -71,6 +90,7 @@ nav h2 {
 }
 
 .contact-section {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     margin: 50px 0;
@@ -133,6 +153,7 @@ nav h2 {
 }
 
 .foot{
+    flex-shrink: 0;
     background-color: #5a2683;
     padding: 20px;
     color: white;
@@ -195,6 +216,11 @@ nav h2 {
   .jump > button {
     width: calc(100% - 40px);
   }
+
+  .contact-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 .contact-form{
